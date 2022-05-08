@@ -40,3 +40,20 @@ body{
   cursor: pointer;
 }
 
+.roll--btn{
+  border: none;
+  font-size: 20px;
+  height: 40px;
+  color: #fff;
+  background: #5035FF;
+  box-shadow: 0px 3.2px 7.68px rgb(0 0 0 / 18%);
+  border-radius: 3.81277px;
+  width: 100px;
+  cursor: pointer;
+  transition: all ease-in-out .5s;
+}
+
+.roll--btn:hover{
+  background-color: #fff;
+  color: #5035FF;
+}
