@@ -2,7 +2,7 @@
 
 function App() {
   return (
-    <div className="App">
+    <div className="main">
       <h1>Tenzies Game</h1>
     </div>
   );
