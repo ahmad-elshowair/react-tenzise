@@ -3,7 +3,11 @@ export const Die = (props) => {
         backgroundColor: props.isHeld ? "#59E391": "#FFF"
     }
     return(
-        <div className="dice--face" style={style}>
+        <div 
+            className="dice--face" 
+            style={style} 
+            onClick={props.hold}
+        >
             <h2 className="dice--number">{props.value}</h2>
         </div>
     );
