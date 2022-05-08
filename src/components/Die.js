@@ -1,5 +1,7 @@
 export const Die = (props) => {
     return(
-        <p className="dice--face">{props.value}</p>
+        <div className="dice--face">
+            <h2 className="dice--number">{props.value}</h2>
+        </div>
     );
 };
