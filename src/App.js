@@ -20,8 +20,15 @@ function App() {
 const[tenzies, setTenzies] = React.useState(false);
 
 React.useEffect(()=>{
+  const isAllDiceHeld = dice.every(die => die.isHeld);
+  const firstValue = dice[0].value;
+  const isAllDiceSameValue = dice.every(die => die.value === firstValue);
+  if (isAllDiceHeld && isAllDiceSameValue) {
+    setTenzies(true);
+  }
   console.log('dice changed');
 }, [dice]);
+
   const holdDice = (id) =>{
     setDice((oldDice) => {
       return oldDice.map((die)=>{
@@ -60,6 +67,7 @@ React.useEffect(()=>{
       <div className="dice--container">
         {diceElements}
       </div>
+      {tenzies && <p className="result"> you won !</p>}
       {dice && <button className="roll--btn" onClick={rollDice}>Roll</button>}
     </div>
   );
