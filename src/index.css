@@ -20,6 +20,12 @@ body{
   align-items: center;
 }
 
+.instructions{
+  text-align: center;
+  font-size: 16px;
+  max-width: 500px;
+}
+
 .dice--container{
   display: grid;
   grid-template-columns: repeat(5, 1fr);
