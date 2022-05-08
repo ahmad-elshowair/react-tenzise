@@ -25,7 +25,7 @@ function App() {
       });
     });
   };
-  
+
   const diceElements = dice.map(die => {
     return <Die 
               key={die.id} 
@@ -36,7 +36,15 @@ function App() {
   });
   
   const rollDice = () =>{
-    return setDice(allNewDice);
+    setDice((oldDice) =>{
+      return oldDice.map((die)=>{
+        return die.isHeld ? die : {
+          id: nanoid(),
+          value: Math.ceil(Math.random() * 6),
+          isHeld: false
+        };
+      });
+    });
   };
 
   return (
