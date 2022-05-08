@@ -48,15 +48,21 @@ React.useEffect(()=>{
   });
   
   const rollDice = () =>{
-    setDice((oldDice) =>{
-      return oldDice.map((die)=>{
-        return die.isHeld ? die : {
-          id: nanoid(),
-          value: Math.ceil(Math.random() * 6),
-          isHeld: false
-        };
+    if(!tenzies){
+      setDice((oldDice) =>{
+        return oldDice.map((die)=>{
+          return die.isHeld ? die : {
+            id: nanoid(),
+            value: Math.ceil(Math.random() * 6),
+            isHeld: false
+          };
+        });
       });
-    });
+    }else{
+      setTenzies(false);
+      setDice(allNewDice);
+    }
+    
   };
 
   return (
@@ -70,7 +76,16 @@ React.useEffect(()=>{
         {diceElements}
       </div>
       {tenzies && <p className="result"> you won !</p>}
-      {dice && <button className="roll--btn" onClick={rollDice}>{tenzies ? "New Game" : "Roll"}</button>}
+      {
+        dice && 
+        <button 
+          className="roll--btn" 
+          onClick={rollDice}
+        >
+          {tenzies ? "New Game" : "Roll"}
+        </button>
+      }
+
     </div>
   );
 }
