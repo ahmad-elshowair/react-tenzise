@@ -17,7 +17,11 @@ function App() {
   };
 
   const [dice, setDice] = React.useState(allNewDice());
+const[tenzies, setTenzies] = React.useState(false);
 
+React.useEffect(()=>{
+  console.log('dice changed');
+}, [dice]);
   const holdDice = (id) =>{
     setDice((oldDice) => {
       return oldDice.map((die)=>{
