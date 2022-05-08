@@ -51,7 +51,6 @@ body{
   cursor: pointer;
   transition: all ease-in-out .5s;
 }
-.roll--btn:active,
-.roll--btn:hover{
+.roll--btn:active{
   box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
 }

@@ -6,7 +6,11 @@ function App() {
   const allNewDice= () =>{
     const newDice = [];
     for (let i = 0; i < 10; i++) {
-      newDice.push({value: Math.ceil(Math.random() * 6), isHeld: false});
+      newDice.push({
+        id: i,
+        value: Math.ceil(Math.random() * 6),
+        isHeld: false
+      });
     }
     return newDice;
   };
