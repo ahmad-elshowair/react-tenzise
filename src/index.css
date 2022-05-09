@@ -60,3 +60,15 @@ body{
 .roll--btn:active{
   box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
 }
+.dice--value{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  gap: 2px;
+}
+.dot{
+  width: 8px;
+  height: 8px;
+  background-color: #000;
+  border-radius: 50%;
+}

@@ -27,7 +27,6 @@ React.useEffect(()=>{
   if (isAllDiceHeld && isAllDiceSameValue) {
     setTenzies(true);
   }
-  console.log('dice changed');
 }, [dice]);
 
   const holdDice = (id) =>{
